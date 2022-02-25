@@ -21,7 +21,6 @@ public class BuggyController : BaseApiController
         return "secret text";
     }
     
-    [Authorize]
     [HttpGet("not-found")]
     public ActionResult<AppUser> GetNotFound()
     {
@@ -32,7 +31,6 @@ public class BuggyController : BaseApiController
         return Ok(thing);
     }
     
-    [Authorize]
     [HttpGet("server-error")]
     public ActionResult<string> GetServerError()
     {
@@ -43,7 +41,6 @@ public class BuggyController : BaseApiController
         return thingToReturn;
     }
     
-    [Authorize]
     [HttpGet("bad-request")]
     public ActionResult<string> GetBadRequest()
     {
